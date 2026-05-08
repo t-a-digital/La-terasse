@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>La Terrasse | Restaurant & Pizzeria</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+  background:rgba(0,0,0,0.8);
+  backdrop-filter:blur(12px);
+  padding:18px 0;
+}
+
+.navbar-brand{
+  color:#ff7a00 !important;
+  font-size:2rem;
+  font-weight:800;
+}
+
+.nav-link{
+  color:white !important;
+  margin-left:20px;
+  transition:0.3s;
+  font-weight:500;
+}
+
+.nav-link:hover{
+  color:#ff7a00 !important;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1974&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:6rem;
+  font-weight:900;
+  margin-bottom:25px;
+}
+
+.hero p{
+  max-width:900px;
+  margin:auto;
+  font-size:1.2rem;
+  color:#d4d4d4;
+  line-height:1.9;
+}
+
+.btn-orange{
+  background:#ff7a00;
+  color:white;
+  padding:16px 40px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s;
+  display:inline-block;
+}
+
+.btn-orange:hover{
+  background:#ff9100;
+  transform:translateY(-4px);
+  color:white;
+}
+
+/* ========================= */
+/* SECTION TITLE */
+/* ========================= */
+
+.section-title{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.section-title h2{
+  font-size:3.4rem;
+  font-weight:800;
+}
+
+.section-title p{
+  color:#bcbcbc;
+  margin-top:15px;
+}
+
+/* ========================= */
+/* INFO CARD */
+/* ========================= */
+
+.info-card{
+  background:#1a1a1a;
+  border-radius:25px;
+  padding:40px;
+  text-align:center;
+  border:1px solid #262626;
+  transition:0.4s;
+  height:100%;
+}
+
+.info-card:hover{
+  transform:translateY(-10px);
+  border-color:#ff7a00;
+}
+
+.info-card i{
+  font-size:3rem;
+  color:#ff7a00;
+  margin-bottom:20px;
+}
+
+/* ========================= */
+/* ABOUT */
+/* ========================= */
+
+.about-premium{
+  background:linear-gradient(to bottom,#0f0f0f,#171717);
+}
+
+.pizza-image-wrapper{
+  position:relative;
+}
+
+.pizza-main-img{
+  width:100%;
+  height:650px;
+  object-fit:cover;
+  border-radius:35px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.floating-card{
+  position:absolute;
+  left:30px;
+  bottom:30px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:25px;
+  max-width:340px;
+}
+
+.floating-card span{
+  color:#ff7a00;
+  font-weight:700;
+}
+
+.floating-card h4{
+  margin-top:10px;
+  line-height:1.5;
+}
+
+.premium-badge{
+  background:#ff7a00;
+  padding:12px 25px;
+  border-radius:50px;
+  font-weight:600;
+}
+
+.premium-title{
+  font-size:3rem;
+  font-weight:800;
+  margin-top:25px;
+  line-height:1.2;
+}
+
+.premium-text{
+  color:#bdbdbd;
+  margin-top:20px;
+  line-height:2;
+  font-size:1.1rem;
+}
+
+.premium-stat{
+  background:#1b1b1b;
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  border:1px solid #262626;
+}
+
+.premium-stat h3{
+  color:#ff7a00;
+  font-size:2.4rem;
+  font-weight:800;
+}
+
+/* ===================================== */
+/* MENU LIVRE 3D */
+/* ===================================== */
+
+.menu-book-section{
+  background:#111;
+  overflow:hidden;
+}
+
+.book-container{
+  perspective:2500px;
+  max-width:1400px;
+  margin:auto;
+  margin-top:70px;
+}
+
+.book{
+  position:relative;
+  width:100%;
+  min-height:900px;
+  transform-style:preserve-3d;
+}
+
+.page{
+  position:absolute;
+  width:50%;
+  top:0;
+  height:100%;
+  background:#f6eee2;
+  color:#111;
+  padding:60px;
+  transition:1s ease;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.page-left{
+  left:0;
+  transform-origin:right;
+  transform:rotateY(18deg);
+  border-radius:30px 0 0 30px;
+}
+
+.page-right{
+  right:0;
+  transform-origin:left;
+  transform:rotateY(-18deg);
+  border-radius:0 30px 30px 0;
+}
+
+.book-container:hover .page-left{
+  transform:rotateY(0deg);
+}
+
+.book-container:hover .page-right{
+  transform:rotateY(0deg);
+}
+
+.book::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  width:18px;
+  height:100%;
+  background:
+  linear-gradient(to right,
+  #2d1a0e,
+  #5a3822,
+  #2d1a0e);
+
+  border-radius:20px;
+  z-index:10;
+}
+
+.book-title{
+  font-size:2.5rem;
+  font-weight:800;
+  color:#7a3d00;
+  margin-bottom:40px;
+}
+
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:18px 0;
+  border-bottom:1px dashed #c9b49c;
+}
+
+.menu-item h4{
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.menu-item p{
+  color:#666;
+  margin:0;
+  font-size:0.95rem;
+}
+
+.menu-price{
+  color:#ff7a00;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* ========================= */
+/* GALLERY */
+/* ========================= */
+
+.gallery img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:25px;
+  transition:0.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* ========================= */
+/* MAP */
+/* ========================= */
+
+.map-box{
+  position:relative;
+  overflow:hidden;
+  border-radius:35px;
+  height:650px;
+}
+
+.map-box iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.map-info{
+  position:absolute;
+  left:40px;
+  top:40px;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(12px);
+  padding:35px;
+  border-radius:25px;
+  max-width:350px;
+}
+
+.map-info h3{
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.map-info p{
+  color:#ddd;
+  line-height:1.8;
+}
+
+/* ========================= */
+/* REVIEWS */
+/* ========================= */
+
+.review-card{
+  background:#181818;
+  border-radius:25px;
+  padding:35px;
+  border:1px solid #262626;
+  height:100%;
+}
+
+.stars{
+  color:gold;
+  margin-bottom:20px;
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact-section{
+  background:
+  linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+  url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1974&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  padding:120px 0;
+}
+
+.contact-box{
+  background:rgba(20,20,20,0.9);
+  padding:60px;
+  border-radius:35px;
+}
+
+.form-control{
+  background:#111;
+  border:1px solid #333;
+  color:white;
+  padding:16px;
+  border-radius:15px;
+}
+
+.form-control:focus{
+  background:#111;
+  color:white;
+  border-color:#ff7a00;
+  box-shadow:none;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+  background:black;
+  padding:80px 0 30px;
+}
+
+.footer-title{
+  margin-bottom:25px;
+  font-weight:700;
+}
+
+.footer-link{
+  color:#c7c7c7;
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
+  transition:0.3s;
+}
+
+.footer-link:hover{
+  color:#ff7a00;
+}
+
+.social-icons a{
+  width:50px;
+  height:50px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  background:#1c1c1c;
+  color:white;
+  margin-right:10px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#ff7a00;
+  transform:translateY(-4px);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:991px){
+
+  .hero h1{
+    font-size:3.5rem;
+  }
+
+  .premium-title{
+    font-size:2.2rem;
+  }
+
+  .book{
+    display:flex;
+    flex-direction:column;
+    min-height:auto;
+    gap:30px;
+  }
+
+  .page{
+    position:relative;
+    width:100%;
+    transform:none !important;
+    border-radius:25px !important;
+    height:auto;
+  }
+
+  .book::before{
+    display:none;
+  }
+
+  .pizza-main-img{
+    height:450px;
+  }
+
+  .map-box{
+    height:500px;
+  }
+
+  .map-info{
+    left:20px;
+    right:20px;
+    top:20px;
+    max-width:none;
+  }
+
+}
+/* ========================================= */
+/* MAP PREMIUM */
+/* ========================================= */
+
+.premium-map-section{
+  background:
+  radial-gradient(circle at top,#181818,#090909);
+}
+
+.premium-map-wrapper{
+  position:relative;
+  overflow:hidden;
+  border-radius:40px;
+  height:750px;
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,0.6);
+}
+
+.premium-map-wrapper iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  filter:
+  grayscale(20%)
+  contrast(1.05)
+  brightness(0.95);
+}
+
+.premium-map-card{
+  position:absolute;
+  top:40px;
+  left:40px;
+
+  width:380px;
+
+  background:
+  rgba(0,0,0,0.72);
+
+  backdrop-filter:blur(18px);
+
+  padding:40px;
+
+  border-radius:30px;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.4);
+}
+
+.map-badge{
+  display:inline-block;
+  background:#ff7a00;
+  color:white;
+  padding:10px 18px;
+  border-radius:50px;
+  font-size:0.9rem;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.premium-map-card h3{
+  font-size:2.4rem;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.premium-map-card p{
+  color:#d8d8d8;
+  line-height:1.9;
+  font-size:1.05rem;
+}
+
+.map-contact{
+  margin-top:30px;
+}
+
+.map-contact div{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:18px;
+}
+
+.map-contact i{
+  color:#ff7a00;
+  font-size:1.2rem;
+}
+
+/* ========================================= */
+/* AVIS QUI DEFILENT */
+/* ========================================= */
+
+.reviews-section{
+  overflow:hidden;
+  background:#101010;
+}
+
+.reviews-slider{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  padding:20px 0;
+}
+
+.reviews-track{
+  display:flex;
+  width:max-content;
+  animation:scrollReviews 35s linear infinite;
+}
+
+.reviews-slider:hover .reviews-track{
+  animation-play-state:paused;
+}
+
+.review-card{
+  width:420px;
+  min-height:260px;
+
+  background:
+  linear-gradient(to bottom,
+  #1b1b1b,
+  #121212);
+
+  border-radius:30px;
+
+  padding:40px;
+
+  margin-right:30px;
+
+  border:
+  1px solid rgba(255,255,255,0.06);
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.35);
+
+  transition:0.4s;
+}
+
+.review-card:hover{
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  border-color:#ff7a00;
+}
+
+.review-card p{
+  color:#d5d5d5;
+  line-height:1.9;
+  font-size:1rem;
+  margin-top:20px;
+}
+
+.review-card h5{
+  margin-top:30px;
+  font-weight:700;
+}
+
+.stars{
+  color:#ffb400;
+  font-size:1.4rem;
+  letter-spacing:3px;
+}
+
+@keyframes scrollReviews{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:991px){
+
+  .premium-map-wrapper{
+    height:650px;
+  }
+
+  .premium-map-card{
+    width:auto;
+    left:20px;
+    right:20px;
+    top:20px;
+    padding:30px;
+  }
+
+  .review-card{
+    width:320px;
+    min-height:auto;
+  }
+
+}
+	.flip-book-wrapper{
+  max-width:1000px;
+  margin:auto;
+}
+
+.flip-book{
+  position:relative;
+  min-height:900px;
+}
+
+.flip-page{
+  display:none;
+
+  background:
+  linear-gradient(to bottom,
+  #f7f1e8,
+  #efe6d9);
+
+  border-radius:35px;
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,0.45);
+
+  overflow:hidden;
+
+  animation:pageFlip 0.6s ease;
+}
+
+.active-page{
+  display:block;
+}
+
+.page-content{
+  padding:60px;
+}
+
+.page-header{
+  margin-bottom:40px;
+}
+
+.page-header h3{
+  font-size:3rem;
+  font-weight:900;
+  color:#7a3d00;
+  font-family:cursive;
+}
+
+.menu-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+
+  padding:20px 0;
+
+  border-bottom:
+  1px dashed #cbb59d;
+}
+
+.menu-row h4{
+  color:#1b1b1b;
+  font-weight:800;
+  margin-bottom:5px;
+}
+
+.menu-row p{
+  color:#666;
+  margin:0;
+}
+
+.menu-row span{
+  color:#ff7a00;
+  font-size:1.3rem;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+/* BOUTONS */
+
+.book-controls{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:40px;
+}
+
+.book-btn{
+  width:70px;
+  height:70px;
+  border:none;
+  border-radius:50%;
+
+  background:#ff7a00;
+  color:white;
+
+  font-size:1.5rem;
+
+  transition:0.3s;
+}
+
+.book-btn:hover{
+  transform:scale(1.08);
+  background:#ff9100;
+}
+
+/* ANIMATION */
+
+@keyframes pageFlip{
+
+  0%{
+    opacity:0;
+    transform:
+    rotateY(40deg)
+    scale(0.95);
+  }
+
+  100%{
+    opacity:1;
+    transform:
+    rotateY(0deg)
+    scale(1);
+  }
+
+}
+
+/* ====================================== */
+/* MAP ULTRA PREMIUM */
+/* ====================================== */
+
+.ultra-map{
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:40px;
+
+  height:750px;
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,0.5);
+}
+
+.ultra-map iframe{
+  width:100%;
+  height:100%;
+  border:none;
+
+  filter:
+  contrast(1.05)
+  brightness(0.9)
+  saturate(1.1);
+}
+
+.ultra-map-card{
+  position:absolute;
+
+  top:40px;
+  left:40px;
+
+  width:420px;
+
+  background:
+  rgba(0,0,0,0.72);
+
+  backdrop-filter:blur(18px);
+
+  border-radius:35px;
+
+  padding:45px;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 15px 50px rgba(0,0,0,0.4);
+}
+
+.location-badge{
+  display:inline-block;
+
+  background:#ff7a00;
+
+  padding:10px 20px;
+
+  border-radius:50px;
+
+  font-weight:700;
+
+  margin-bottom:25px;
+}
+
+.ultra-map-card h3{
+  font-size:3rem;
+  font-weight:900;
+  margin-bottom:20px;
+}
+
+.ultra-map-card p{
+  color:#d4d4d4;
+  line-height:1.9;
+  margin-bottom:30px;
+}
+
+.map-detail{
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+
+  margin-bottom:22px;
+}
+
+.map-detail i{
+  color:#ff7a00;
+  font-size:1.2rem;
+  margin-top:4px;
+}
+
+/* ====================================== */
+/* RESPONSIVE TEL */
+/* ====================================== */
+
+@media(max-width:991px){
+
+  .page-content{
+    padding:35px;
+  }
+
+  .page-header h3{
+    font-size:2.2rem;
+  }
+
+  .menu-row{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .menu-row span{
+    align-self:flex-start;
+  }
+
+  .flip-book{
+    min-height:auto;
+  }
+
+  .ultra-map{
+    height:650px;
+  }
+
+  .ultra-map-card{
+    width:auto;
+
+    left:20px;
+    right:20px;
+    top:20px;
+
+    padding:30px;
+  }
+
+  .ultra-map-card h3{
+    font-size:2rem;
+  }
+
+}
+	/* ========================================= */
+/* DEZOOM GLOBAL DU SITE */
+/* ========================================= */
+
+html{
+  zoom:0.90;
+}
+
+@media(max-width:991px){
+
+  html{
+    zoom:1;
+  }
+
+}
+
+/* ========================================= */
+/* POPUP PREMIUM */
+/* ========================================= */
+
+.premium-popup{
+  background:#111;
+  border-radius:35px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 25px 80px rgba(0,0,0,0.55);
+}
+
+.popup-image{
+  height:100%;
+  min-height:750px;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+  url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1974&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  position:relative;
+}
+
+.popup-overlay{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  padding:50px;
+}
+
+.popup-overlay h2{
+  font-size:3.2rem;
+  font-weight:900;
+  line-height:1.2;
+}
+
+.popup-badge{
+  display:inline-block;
+
+  background:#ff7a00;
+
+  width:max-content;
+
+  padding:10px 22px;
+
+  border-radius:50px;
+
+  font-weight:700;
+
+  margin-bottom:25px;
+}
+
+.popup-content{
+  padding:70px;
+  position:relative;
+}
+
+.popup-close{
+  position:absolute;
+  top:30px;
+  right:30px;
+}
+
+.popup-mini-title{
+  color:#ff7a00;
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:25px;
+}
+
+.popup-title{
+  font-size:3rem;
+  font-weight:900;
+  line-height:1.2;
+  margin-bottom:30px;
+}
+
+.popup-text{
+  color:#cfcfcf;
+  line-height:2;
+  margin-bottom:25px;
+  font-size:1.05rem;
+}
+
+.popup-features{
+  margin-top:35px;
+}
+
+.popup-feature{
+  display:flex;
+  align-items:center;
+  gap:15px;
+
+  margin-bottom:20px;
+
+  font-size:1rem;
+}
+
+.popup-feature i{
+  color:#ff7a00;
+  font-size:1.2rem;
+}
+
+.popup-footer-text{
+  margin-top:45px;
+
+  color:#ff7a00;
+
+  font-weight:700;
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:991px){
+
+  .popup-content{
+    padding:40px 30px;
+  }
+
+  .popup-title{
+    font-size:2rem;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+🍕 La Terrasse
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#about">Restaurant</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#menu">Menu</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#gallery">Galerie</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#reviews">Avis</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-10">
+
+<span class="text-warning fw-bold text-uppercase">
+Restaurant • Pizzeria • Terrasse
+</span>
+
+<h1>La Terrasse</h1>
+
+<p>
+Découvrez une véritable expérience italienne au cœur de Thizy-les-Bourgs.
+Pizzas artisanales, cuisine généreuse et ambiance chaleureuse.
+</p>
+
+<div class="mt-5 d-flex justify-content-center gap-3 flex-wrap">
+
+<a href="tel:0474130537" class="btn-orange">
+<i class="bi bi-telephone-fill"></i>
+Réserver maintenant
+</a>
+
+<a href="#menu" class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold">
+Voir le menu
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================================= -->
+<!-- POPUP PREMIUM -->
+<!-- REMETS ÇA JUSTE APRÈS LE NAVBAR -->
+<!-- ========================================= -->
+
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+
+    <div class="modal-content premium-popup">
+
+      <div class="modal-body p-0 overflow-hidden">
+
+        <div class="row g-0 align-items-center">
+
+          <!-- IMAGE -->
+
+          <div class="col-lg-5 d-none d-lg-block">
+
+            <div class="popup-image">
+
+              <div class="popup-overlay">
+
+                <span class="popup-badge">
+                  🍕 Maquette Premium
+                </span>
+
+                <h2>
+                  Bienvenue chez<br>
+                  La Terrasse
+                </h2>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- TEXTE -->
+
+          <div class="col-lg-7">
+
+            <div class="popup-content">
+
+              <button
+                type="button"
+                class="btn-close btn-close-white popup-close"
+                data-bs-dismiss="modal">
+              </button>
+
+              <h5 class="popup-mini-title">
+                T&A Digital Management
+              </h5>
+
+              <h2 class="popup-title">
+                Votre futur site internet professionnel 🍕
+              </h2>
+
+              <p class="popup-text">
+                Cette maquette premium a été conçue afin de vous montrer
+                le potentiel de votre futur site internet moderne
+                pour votre restaurant / pizzeria.
+              </p>
+
+              <p class="popup-text">
+                Le site possède un design haut de gamme totalement responsive
+                sur mobile, tablette et ordinateur avec :
+              </p>
+
+              <!-- FEATURES -->
+
+              <div class="popup-features">
+
+                <div class="popup-feature">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Menu interactif premium</span>
+                </div>
+
+                <div class="popup-feature">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Galerie photos moderne</span>
+                </div>
+
+                <div class="popup-feature">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Avis clients animés</span>
+                </div>
+
+                <div class="popup-feature">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Carte Google Maps immersive</span>
+                </div>
+
+                <div class="popup-feature">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Compatible téléphone & tablette</span>
+                </div>
+
+              </div>
+
+              <div class="popup-footer-text">
+                Merci pour votre confiance et bonne découverte 🍕
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- INFOS -->
+
+<section class="py-5">
+
+<div class="container py-5">
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+<div class="info-card">
+
+<i class="bi bi-geo-alt-fill"></i>
+
+<h3>Adresse</h3>
+
+<p>
+11 Place Aristide Briand<br>
+69240 Thizy-les-Bourgs
+</p>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="info-card">
+
+<i class="bi bi-clock-fill"></i>
+
+<h3>Horaires</h3>
+
+<p>
+Ouvert tous les jours<br>
+Midi & soir
+</p>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="info-card">
+
+<i class="bi bi-star-fill"></i>
+
+<h3>Avis Google</h3>
+
+<p>
+4.6★ sur Google<br>
+74+ avis positifs
+</p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about-premium py-5">
+
+<div class="container py-5">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6">
+
+<div class="pizza-image-wrapper">
+
+<img
+src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1974&auto=format&fit=crop"
+class="pizza-main-img"
+>
+
+<div class="floating-card">
+
+<span>🍕 Depuis plusieurs années</span>
+
+<h4>
+Des pizzas généreuses préparées avec passion
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<span class="premium-badge">
+Pizzeria familiale • Cuisine artisanale
+</span>
+
+<h2 class="premium-title">
+Une expérience italienne authentique
+</h2>
+
+<p class="premium-text">
+La Terrasse accueille ses clients dans une ambiance chaleureuse
+avec des recettes généreuses et des pizzas préparées avec passion.
+</p>
+
+<div class="row mt-5 g-4">
+
+<div class="col-6">
+<div class="premium-stat">
+
+<h3>74+</h3>
+<span>Avis positifs</span>
+
+</div>
+</div>
+
+<div class="col-6">
+<div class="premium-stat">
+
+<h3>4.6★</h3>
+<span>Note Google</span>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- MENU LIVRE REALISTE AVEC VRAIES PAGES QUI TOURNENT -->
+<!-- REMPLACE TOUTE TA SECTION MENU PAR ÇA -->
+<!-- ================================================= -->
+
+<section id="menu" class="menu-book-section py-5">
+
+  <div class="container py-5">
+
+    <div class="section-title">
+      <h2>Notre Menu</h2>
+      <p>
+        Découvrez toutes nos pizzas artisanales
+      </p>
+    </div>
+
+    <div class="flip-book-wrapper">
+
+      <!-- LIVRE -->
+
+      <div class="flip-book" id="flipBook">
+
+        <!-- PAGE 1 -->
+
+        <div class="flip-page active-page" id="page1">
+
+          <div class="page-content">
+
+            <div class="page-header">
+              <h3>Base Tomate 🍅</h3>
+            </div>
+
+            <!-- MENU -->
+
+            <div class="menu-row">
+              <div>
+                <h4>Fromage</h4>
+                <p>Sauce tomate, emmental, olives</p>
+              </div>
+              <span>8€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Jambon</h4>
+                <p>Sauce tomate, jambon, emmental, olives</p>
+              </div>
+              <span>9€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Reine</h4>
+                <p>Jambon, champignons, emmental, olives</p>
+              </div>
+              <span>10€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Thon</h4>
+                <p>Thon, emmental, olives</p>
+              </div>
+              <span>10€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Chorizo</h4>
+                <p>Chorizo, emmental, olives</p>
+              </div>
+              <span>10€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Napolitaine</h4>
+                <p>Anchois, emmental, olives</p>
+              </div>
+              <span>10€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Strasbourgeoise</h4>
+                <p>Knacki, emmental, olives</p>
+              </div>
+              <span>10€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>4 Fromages</h4>
+                <p>Chèvre, bleu, mozzarella, raclette</p>
+              </div>
+              <span>12€</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PAGE 2 -->
+
+        <div class="flip-page" id="page2">
+
+          <div class="page-content">
+
+            <div class="page-header">
+              <h3>Suite du Menu 🍕</h3>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Thizérote</h4>
+                <p>Andouillette, vin blanc, emmental</p>
+              </div>
+              <span>11€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Légume</h4>
+                <p>Courgettes, poivrons, emmental</p>
+              </div>
+              <span>11€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Magret</h4>
+                <p>Magret de canard, chèvre, noix, miel</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Fruit de Mer</h4>
+                <p>Cocktail fruits de mer, emmental</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Bœuf</h4>
+                <p>Bœuf haché, emmental, olives</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Kebab</h4>
+                <p>Émincé de kebab, emmental</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Poulet Curry</h4>
+                <p>Poulet, poivrons, emmental</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Campagnarde</h4>
+                <p>Saucisse fumée, champignons, oignons</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PAGE 3 -->
+
+        <div class="flip-page" id="page3">
+
+          <div class="page-content">
+
+            <div class="page-header">
+              <h3>Base Crème 🧀</h3>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Normande</h4>
+                <p>Crème, oignons, lardons, emmental</p>
+              </div>
+              <span>9€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Chèvre</h4>
+                <p>Chèvre, miel, emmental</p>
+              </div>
+              <span>10€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Savoyarde</h4>
+                <p>Pomme de terre, lardons, reblochon</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Saumon</h4>
+                <p>Saumon fumé, emmental</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Burger</h4>
+                <p>Cheddar, bacon, steak haché, frites</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+            <div class="menu-row">
+              <div>
+                <h4>Merguez</h4>
+                <p>Merguez, emmental, olives</p>
+              </div>
+              <span>13€</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FLECHES -->
+
+      <div class="book-controls">
+
+        <button class="book-btn" onclick="prevPage()">
+          <i class="bi bi-arrow-left"></i>
+        </button>
+
+        <button class="book-btn" onclick="nextPage()">
+          <i class="bi bi-arrow-right"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+
+<!-- ========================================= -->
+<!-- CARTE GOOGLE MAPS PREMIUM -->
+<!-- REMPLACE TA SECTION MAP PAR CELLE-CI -->
+<!-- ========================================= -->
+
+<section class="premium-map-section py-5">
+
+  <div class="container py-5">
+
+    <div class="section-title">
+      <h2>Où nous trouver ?</h2>
+      <p>
+        Retrouvez La Terrasse au cœur de Thizy-les-Bourgs
+      </p>
+    </div>
+
+    <div class="premium-map-wrapper">
+
+      <!-- MAP -->
+
+      <iframe
+        src="https://www.google.com/maps?q=11+Place+Aristide+Briand+69240+Thizy-les-Bourgs&output=embed"
+        loading="lazy">
+      </iframe>
+
+      <!-- CARD -->
+
+      <div class="premium-map-card">
+
+        <span class="map-badge">
+          🍕 Restaurant & Pizzeria
+        </span>
+
+        <h3>La Terrasse</h3>
+
+        <p>
+          11 Place Aristide Briand<br>
+          69240 Thizy-les-Bourgs
+        </p>
+
+        <div class="map-contact">
+
+          <div>
+            <i class="bi bi-telephone-fill"></i>
+            <span>04 74 13 05 37</span>
+          </div>
+
+          <div>
+            <i class="bi bi-clock-fill"></i>
+            <span>Ouvert midi & soir</span>
+          </div>
+
+        </div>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=11+Place+Aristide+Briand+69240+Thizy-les-Bourgs"
+          target="_blank"
+          class="btn-orange mt-4">
+
+          <i class="bi bi-geo-alt-fill"></i>
+          Calculer mon itinéraire
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- AVIS CLIENTS QUI DEFILENT -->
+<!-- REMPLACE TOUTE TA SECTION AVIS -->
+<!-- ========================================= -->
+
+<section id="reviews" class="reviews-section py-5">
+
+  <div class="container-fluid">
+
+    <div class="section-title">
+      <h2>Avis Clients</h2>
+      <p>
+        Ce que pensent nos clients de La Terrasse
+      </p>
+    </div>
+
+    <div class="reviews-slider">
+
+      <div class="reviews-track">
+
+        <!-- AVIS -->
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Une adresse incontournable avec des pizzas excellentes
+            et une ambiance très chaleureuse.
+          </p>
+
+          <h5>Jean Lebret</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Accueil très sympathique, service rapide
+            et produits de qualité.
+          </p>
+
+          <h5>Corine Fillet</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Les meilleures pizzas de la région,
+            nous revenons chaque semaine.
+          </p>
+
+          <h5>Julie Anselmini</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Très bon rapport qualité prix,
+            ambiance familiale et conviviale.
+          </p>
+
+          <h5>Lucas Bernard</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            La pâte est incroyable et les ingrédients
+            sont vraiment frais.
+          </p>
+
+          <h5>Sophie Martin</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Service impeccable et pizzas généreuses,
+            je recommande fortement.
+          </p>
+
+          <h5>David Morel</h5>
+        </div>
+
+        <!-- DUPLICATION POUR BOUCLE -->
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Une adresse incontournable avec des pizzas excellentes
+            et une ambiance très chaleureuse.
+          </p>
+
+          <h5>Jean Lebret</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Accueil très sympathique, service rapide
+            et produits de qualité.
+          </p>
+
+          <h5>Corine Fillet</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Les meilleures pizzas de la région,
+            nous revenons chaque semaine.
+          </p>
+
+          <h5>Julie Anselmini</h5>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            Très bon rapport qualité prix,
+            ambiance familiale et conviviale.
+          </p>
+
+          <h5>Lucas Bernard</h5>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- CONTACT -->
+
+<section id="contact" class="contact-section">
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-10">
+
+<div class="contact-box">
+
+<div class="section-title">
+
+<h2>Réserver une table</h2>
+
+<p>
+Contactez-nous pour réserver votre repas
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-6">
+<input type="text" class="form-control" placeholder="Votre nom">
+</div>
+
+<div class="col-md-6">
+<input type="tel" class="form-control" placeholder="Téléphone">
+</div>
+
+<div class="col-md-6">
+<input type="email" class="form-control" placeholder="Adresse email">
+</div>
+
+<div class="col-md-6">
+<input type="date" class="form-control">
+</div>
+
+<div class="col-12">
+<textarea rows="5" class="form-control" placeholder="Votre message"></textarea>
+</div>
+
+<div class="col-12 text-center">
+
+<button class="btn-orange border-0">
+Envoyer la réservation
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="row g-5">
+
+<div class="col-lg-4">
+
+<h3 class="footer-title">
+🍕 La Terrasse
+</h3>
+
+<p class="text-secondary">
+Restaurant & Pizzeria à Thizy-les-Bourgs.
+Cuisine italienne authentique et pizzas artisanales.
+</p>
+
+<div class="social-icons mt-4">
+
+<a href="#">
+<i class="bi bi-facebook"></i>
+</a>
+
+<a href="#">
+<i class="bi bi-instagram"></i>
+</a>
+
+<a href="#">
+<i class="bi bi-google"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<h4 class="footer-title">
+Informations
+</h4>
+
+<a href="#" class="footer-link">Accueil</a>
+<a href="#about" class="footer-link">Restaurant</a>
+<a href="#menu" class="footer-link">Menu</a>
+<a href="#gallery" class="footer-link">Galerie</a>
+<a href="#contact" class="footer-link">Contact</a>
+
+</div>
+
+<div class="col-lg-4">
+
+<h4 class="footer-title">
+Contact
+</h4>
+
+<p class="text-secondary">
+<i class="bi bi-geo-alt-fill text-warning"></i>
+11 Place Aristide Briand
+</p>
+
+<p class="text-secondary">
+<i class="bi bi-telephone-fill text-warning"></i>
+04 74 13 05 37
+</p>
+
+<p class="text-secondary">
+<i class="bi bi-envelope-fill text-warning"></i>
+flarome@free.fr
+</p>
+
+</div>
+
+</div>
+
+<hr class="border-secondary my-5">
+
+<div class="text-center text-secondary">
+© 2026 La Terrasse — Tous droits réservés
+</div>
+
+</div>
+
+</footer>
+<!-- ================================================= -->
+<!-- SCRIPT PAGES -->
+<!-- ================================================= -->
+
+<script>
+
+let currentPage = 1;
+const totalPages = 3;
+
+function showPage(page){
+
+  document.querySelectorAll('.flip-page').forEach(p => {
+    p.classList.remove('active-page');
+  });
+
+  document.getElementById('page' + page).classList.add('active-page');
+
+}
+
+function nextPage(){
+
+  currentPage++;
+
+  if(currentPage > totalPages){
+    currentPage = 1;
+  }
+
+  showPage(currentPage);
+
+}
+
+function prevPage(){
+
+  currentPage--;
+
+  if(currentPage < 1){
+    currentPage = totalPages;
+  }
+
+  showPage(currentPage);
+
+}
+	window.addEventListener('load', function(){
+
+  const modal = new bootstrap.Modal(
+    document.getElementById('welcomeModal')
+  );
+
+  modal.show();
+
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
